@@ -8,11 +8,19 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import vdnPkg.ui.MyUID;
 
 
 @SpringUI
 @Theme("myTheme")
 public class MyUI extends UI {
+
+    MyUID myUID;
+
+    public MyUI(MyUID myUID) {
+        this.myUID = myUID;
+    }
+
 
 
     @Override
@@ -26,7 +34,7 @@ public class MyUI extends UI {
         verticalLayout.setMargin(true);
         verticalLayout.setSpacing(true);
 
-        verticalLayout.addComponents(textField, button);
+        verticalLayout.addComponents(textField, button, myUID);
 
         setContent(verticalLayout);
     }

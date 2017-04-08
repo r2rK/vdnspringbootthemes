@@ -1,4 +1,16 @@
+// 1) Global SASS variables
+$v-textfield-background-color:yellow;
+$v-background-color: #1a61b7;
+
 @import "../valo/valo.scss";
+
+// 2) General vaadin SASS classes - example modify (.v....)
+// 3) Custom SASS classes - example modify (.abLayout)
+
+// Additional info:
+// All SASS classess (general, custom) have higher priority then global variables
+
+
 @mixin myTheme {
   @include valo;
   .v-app {
@@ -9,10 +21,31 @@
     background-color: blue;
   }
 
-  .v-textfield{
-    background-color: yellow;
+  //.v-textfield{background-color: blue;}
+
+  .abLayout {
+
+    $my-background-color: red;
+    $tt-background-color: yellow;
+
+    background-color: $my-background-color;
+
+    //font-size:24px;
+    //font-family: "Times New Roman";
+
+    .myBackground {
+      background-color: $tt-background-color;
+    }
+
+    .myCustomFont {
+      font-size:24px;
+      font-family: "Times New Roman";
+    }
+
   }
 
-
 }
+
+
+
 @include myTheme;
