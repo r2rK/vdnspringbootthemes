@@ -1,2 +1,5 @@
 @import "addons.scss";
 @import "myTheme.scss";
+
+@include myTheme;
+@include addons;

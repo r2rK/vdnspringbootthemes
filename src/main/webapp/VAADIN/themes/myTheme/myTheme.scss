@@ -14,7 +14,7 @@ $v-background-color: #1a61b7;
 @mixin myTheme {
   @include valo;
   .v-app {
-    background-color: green;
+    background-color: red;
   }
   .v-button {
     background-image: none;
@@ -45,7 +45,8 @@ $v-background-color: #1a61b7;
   }
 
 }
-@include myTheme;
+
+
 
 
 
